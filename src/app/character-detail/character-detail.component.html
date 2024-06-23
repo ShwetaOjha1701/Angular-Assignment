@@ -1,0 +1,22 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <div class="back-to-list" (click)="backtohome()">
+        <i class="fas fa-arrow-left"></i> Back To List
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3" *ngIf="character">
+    <div class="col">
+      <div class="character-details">
+        <h2>{{ character.name }}</h2>
+        <div class="details">
+          <p><strong>Species:</strong> {{ species?.name }}</p>
+          <p><strong>Movies:</strong> {{ movies.join(', ') }}</p>
+          <p><strong>Spaceships:</strong> {{ starships.join(', ') }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

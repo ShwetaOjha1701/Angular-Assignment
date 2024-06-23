@@ -1,0 +1,55 @@
+/* src/app/character-detail/character-detail.component.css */
+h2 {
+    color: #333;
+  }
+  
+  p {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  div {
+    margin-top: 20px;
+  }
+  
+  /* styles.scss or component.scss */
+
+.back-to-list {
+  cursor: pointer;
+  font-size: 18px;
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 20px;
+}
+
+.back-to-list:hover {
+  text-decoration: underline;
+}
+
+.character-details {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.character-details h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.character-details .details {
+  margin-top: 15px;
+}
+
+.character-details .details p {
+  margin-bottom: 5px;
+}
+
+/* Optional: FontAwesome icon */
+.back-to-list i {
+  margin-right: 5px;
+}

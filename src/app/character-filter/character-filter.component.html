@@ -1,0 +1,81 @@
+<div class="container mt-5">
+  <br>
+  <div class="row">
+    <div class="col-10"></div>
+    <div class="col-2 text-end">
+      <button type="submit" class="btn btn-primary" (click)="backtohome()">Go to Dashboard</button>
+    </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col">
+      <h3 class="mb-4">Filter Characters</h3>
+      <form [formGroup]="filterForm" (ngSubmit)="applyFilters()">
+        <div class="row mb-3">
+          <div class="col">
+            <label for="movie" class="form-label">Movie</label>
+            <select id="movie" formControlName="movie" class="form-select">
+              <option *ngFor="let movie of movies" [value]="movie.url">{{ movie.title }}</option>
+            </select>
+          </div>
+          <div class="col">
+            <label for="species" class="form-label">Species</label>
+            <select id="species" formControlName="species" class="form-select">
+              <option *ngFor="let species of speciesList" [value]="species.url">{{ species.name }}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <label for="startYear" class="form-label">Start Year</label>
+            <input id="startYear" type="text" formControlName="startYear" class="form-control">
+          </div>
+          <div class="col">
+            <label for="endYear" class="form-label">End Year</label>
+            <input id="endYear" type="text" formControlName="endYear" class="form-control">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col">
+            <button type="submit" class="btn btn-danger" (click)="getdata()">Apply Filters</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="displyfilterchardata.length > 0">
+    <div class="col">
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead class="thead-light">
+            <tr>
+              <th>Name</th>
+              <th>Birth Year</th>
+              <th>Gender</th>
+              <th>Height (cm)</th>
+              <th>Mass (kg)</th>
+              <th>Hair Color</th>
+              <th>Skin Color</th>
+              <th>Eye Color</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let character of displyfilterchardata">
+              <td>{{ character.name }}</td>
+              <td>{{ character.birth_year }}</td>
+              <td>{{ character.gender }}</td>
+              <td>{{ character.height }}</td>
+              <td>{{ character.mass }}</td>
+              <td>{{ character.hair_color }}</td>
+              <td>{{ character.skin_color }}</td>
+              <td>{{ character.eye_color }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
