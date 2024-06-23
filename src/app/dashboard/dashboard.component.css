@@ -1,0 +1,28 @@
+/* dashboard.component.scss */
+
+:host {
+    display: block; /* Ensures the component behaves like a block element */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    width: 100vw; /* Sets the width to 100% of the viewport width */
+    /* background-color: #338847; */
+    background-color: #337088;
+}  
+  
+  .container {
+    margin-top: 230px; /* Adds margin top of 5% of viewport height */
+  }
+  
+  .card {
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-size: bold;
+  }
+  

@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <br><br>
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-info" (click)="backtohome()">GO TO DASHBOARD</button>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <h4 style="font-size: bold;">CHARACTER LIST</h4>
+    <div class="col">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <!-- <th>Other Data</th> -->
+            <!-- Add more headers as needed -->
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let character of filteredCharacters" (click)="selectCharacter(character)" (mouseover)="hoverRow = character" (mouseout)="hoverRow = null"  [class.table-primary]="hoverRow === character">
+            <td>{{ character.name }}</td>
+            <!-- <td>{{ character.otherData }}</td> -->
+            <!-- Add more cells as needed -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

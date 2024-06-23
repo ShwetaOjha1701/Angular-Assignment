@@ -1,0 +1,33 @@
+/* src/app/character-list/character-list.component.css */
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  li:hover {
+    background: #ddd;
+  }
+  
+  h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  .table tbody tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  .table tbody tr.table-primary:hover {
+    background-color: #c7e5ff; /* Adjust color as needed */
+  }
+  
+  
